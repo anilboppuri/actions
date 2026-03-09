@@ -1,0 +1,18 @@
+name: Environment Variables
+on:
+  push:
+    branches:
+      - master
+env:
+  CHANNEL_NAME: CodeGeeks
+jobs:
+  envdemo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: EnvDemo
+        run: echo "Hello from ${{env.CHANNEL_NAME}}"
+      - name: Get Comments on ${{env.CHANNEL_NAME}}"
+        run: echo "Awesome" echo "Geat Content" echo 'Thank you for sharing"
+          
+  
+
