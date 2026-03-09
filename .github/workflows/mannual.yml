@@ -2,7 +2,7 @@ name: Mannual Worlkflow
 
 on:
   workflow_dispatch:
-    inputs:
+    inputs:  
       name:
        description: 'Name'
        type: string
