@@ -11,14 +11,18 @@ jobs:
     steps:
       - name: EnvDemo
         run: echo "Hello, $CHANNEL_NAME !"
+        
       - name: Set Envariables programatically
         run: echo "COUNT=100000" >> $GITHUB_ENV
+        
       - name: Access env variable
         run: echo ${{env.COUNT}}
+        
       - name: Update env variables
         run: |
-          echo "CHANNEL_NAME=mODIFed" >> GITHUB_ENV
+          echo "CHANNEL_NAME= MODIFIED" >> GITHUB_ENV
           echo "COUNT=350000" >> GITHUB_ENV
+          
       - name: Access UpdatedEnv variables
         run: |
           echo ${{env.COUNT}} 
