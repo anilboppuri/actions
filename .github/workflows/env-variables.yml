@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: EnvDemo
+        env:
+         CHANNEL_NAME: CodeGeeks
         run: echo "Hello from ${{env.CHANNEL_NAME}}"
+        
       - name: Get Comments on ${{env.CHANNEL_NAME}}"
         run: echo "Awesome" echo "Geat Content" echo "Thank you for sharing"
           
