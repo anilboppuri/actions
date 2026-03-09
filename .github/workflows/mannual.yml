@@ -12,6 +12,6 @@ jobs:
    runs-on: ubuntu-latest
    
    steps:
-     - name: Mannual
+     - name: MyMannual
        run: "${{inputs.name}}"
        
