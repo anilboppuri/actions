@@ -1,0 +1,20 @@
+name: Scheduled Workflow
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * 1"
+    
+   
+                
+jobs:
+  demo:
+   runs-on: ubuntu-latest
+   
+   steps:
+     - name: Long Time
+       run: |
+         current_date_time=$(date)
+         echo "Current date and time :$current_date_time"
+  
+     
