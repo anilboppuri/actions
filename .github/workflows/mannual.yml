@@ -10,7 +10,8 @@ on:
 jobs:
   manual:
    runs-on: ubuntu-latest
+   
    steps:
      - name: Mannual
-     run: "${{inputs.name}}"
+       run: "${{inputs.name}}"
        
