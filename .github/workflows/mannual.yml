@@ -1,0 +1,40 @@
+name: Mannual Worlkflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+       description: 'Name'
+       type: string
+       default: 'Anil'
+      age:
+       description: 'Age'
+       type: number
+       required: true
+      gender:
+       description: 'Sex'
+       type: choice
+       options: 
+         - Male
+         - Female
+      married:
+       description: 'Is Married?'
+       type: boolean
+                
+jobs:
+  manual:
+   runs-on: ubuntu-latest
+   
+   steps:
+     - name: MyName
+       run: echo "${{inputs.name}}"
+  
+     - name: MyAge
+       run: echo "${{inputs.age}}"
+
+     - name: MyGender
+       run: echo "${{inputs.gender}}"
+       
+     - name: MaritalStatus
+       run: echo "${{inputs.married}}"
+ 
