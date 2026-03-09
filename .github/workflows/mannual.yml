@@ -20,6 +20,6 @@ jobs:
      - name: MyName
        run: echo "${{inputs.name}}"
   
-     - name: MyName
-       run: echo "${{inputs.name}}"
+     - name: MyAge
+       run: echo "${{inputs.age}}"
  
