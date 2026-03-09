@@ -1,19 +1,16 @@
 name: Step Output
-
 on:
   push:
-    branches: [master]
-
+    branches:
+      - master
 jobs:
   job1:
     runs-on: ubuntu-latest
-
     steps:
-     - name: set output
-       id: SET-OUTPUT
-       shell: bash
-       run: echo" age=16" >> $GITHUB_OUTPUT
-
-      - name : access output
+      - name: set output
+        id: SET-OUTPUT
+        shell: bash
+        run: echo" age=16" >> $GITHUB_OUTPUT
+      - name: access output
         run: echo ${{steps.SET-OUTPUT.outputs.age}}
        
