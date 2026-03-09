@@ -5,24 +5,24 @@ on:
     branches: [master]
 
 jobs:
-  build-angular:
+  build-angular-app:
     runs-on: ubuntu-latest
     steps:
      - uses : actions/checkout@v4
 
-     - name: Setup NodeJS
+     - name: SetupNodeJS
        uses: actions/setup-node@v4
        with:
          node-version: 18.x
      - name: Install dependencies
        run: npm install 
 
-     - name: Build
+     - name: BuildApp
        run: npm run build 
        
-  deploy-angular:
+  deploy-angular-app:
        runs-on : ubuntu-latest
-       needs: build-angular
+       needs: build-angular-app
       steps: 
         name: Test
         run : echo "tests running"     
