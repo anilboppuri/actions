@@ -10,7 +10,18 @@ jobs:
       - name: set output
         id: SET-OUTPUT
         shell: bash
-        run: echo "age=16" >> $GITHUB_OUTPUT
+        run: |
+           echo "name=Anita" >> $GITHUB_OUTPUT
+           echo "age=16" >> $GITHUB_OUTPUT
+      - name: set output 2
+        id: SET-OUTPUT2
+        shell: bash
+        run: |
+           echo "salary=10000" >> $GITHUB_OUTPUT
+           
       - name: access output
-        run: echo ${{steps.SET-OUTPUT.outputs.age}}
+        run: |
+           echo "Name is : ${{steps.SET-OUTPUT.outputs.name}}"
+           echo "Age is: ${{steps.SET-OUTPUT.outputs.age}}"
+           echo "Salary is: ${{steps.SET-OUTPUT2.outputs.salary}}"
        
