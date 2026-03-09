@@ -7,7 +7,7 @@ on:
        description: 'Name'
        type: string
        default: 'Anil'
-     age:
+      age:
        description: 'Age'
        type: number
        required: true
@@ -19,6 +19,7 @@ jobs:
    steps:
      - name: MyName
        run: echo "${{inputs.name}}"
-  steps:
-     - name: MyAge
-       run: echo "${{inputs.age}}"     
+  
+     - name: MyName
+       run: echo "${{inputs.name}}"
+ 
