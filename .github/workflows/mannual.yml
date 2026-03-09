@@ -7,11 +7,18 @@ on:
        description: 'Name'
        type: string
        default: 'Anil'
+     age:
+       description: 'Age'
+       type: number
+       required: true
+         
 jobs:
   manual:
    runs-on: ubuntu-latest
    
    steps:
-     - name: MyMannual
+     - name: MyName
        run: echo "${{inputs.name}}"
-       
+  steps:
+     - name: MyAge
+       run: echo "${{inputs.age}}"     
