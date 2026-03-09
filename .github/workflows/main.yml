@@ -1,4 +1,4 @@
-name: CI
+name: Hello World Auto
 
 # Controls when the workflow will run
 on:
