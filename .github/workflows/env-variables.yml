@@ -12,7 +12,7 @@ jobs:
       - name: EnvDemo
         run: echo "Hello from ${{env.CHANNEL_NAME}}"
       - name: Get Comments on ${{env.CHANNEL_NAME}}"
-        run: echo "Awesome" echo "Geat Content" echo 'Thank you for sharing"
+        run: echo "Awesome" echo "Geat Content" echo "Thank you for sharing"
           
   
 
