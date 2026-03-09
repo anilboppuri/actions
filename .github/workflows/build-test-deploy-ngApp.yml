@@ -1,29 +1,25 @@
 name: BuildDeployTestApp
-
 on:
   push:
-    branches: [master]
-
+    branches:
+      - master
 jobs:
   build-angularapp:
     runs-on: ubuntu-latest
     steps:
-     - uses : actions/checkout@v4
-
-     - name: SetupNodeJS
-       uses: actions/setup-node@v4
-       with:
-         node-version: 18.x
-     - name: Install dependencies
-       run: npm install 
-
-     - name: BuildApp
-       run: npm run build 
-       
+      - uses: actions/checkout@v4
+      - name: SetupNodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: npm install
+      - name: BuildApp
+        run: npm run build
   deploy-angularapp:
-       runs-on : ubuntu-latest
-       needs: build-angularapp
-      steps: 
-        name: Test
-        run : echo "tests running"     
-  
+    runs-on: ubuntu-latest
+    needs: build-angularapp
+    steps:
+      - name: Test
+        run: echo "testing"
+
