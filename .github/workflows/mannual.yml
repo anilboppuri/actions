@@ -1,0 +1,16 @@
+name: Mannual Worlkflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+       description: 'Name'
+       type: string
+       default: 'Anil'
+jobs:
+  manual:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Mannual
+     run: "${{inputs.name}}"
+       
