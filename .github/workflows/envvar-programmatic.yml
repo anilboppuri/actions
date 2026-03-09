@@ -6,10 +6,10 @@ on:
 env:
   CHANNEL_NAME: CodeGeeks
 jobs:
-  envdemo:
+  envdemojob:
     runs-on: ubuntu-latest
     steps:
-      - name: EnvDemo
+      - name: env_demo_step
         run: echo "Hello, $CHANNEL_NAME !"
         
       - name: Set Envariables programatically
