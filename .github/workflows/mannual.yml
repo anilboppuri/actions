@@ -11,7 +11,16 @@ on:
        description: 'Age'
        type: number
        required: true
-         
+      gender:
+       description: 'Sex'
+       type: choice
+       options: 
+         - Male
+         - Female
+      married:
+       description: 'Is Married?'
+       type: boolean
+                
 jobs:
   manual:
    runs-on: ubuntu-latest
@@ -22,4 +31,10 @@ jobs:
   
      - name: MyAge
        run: echo "${{inputs.age}}"
+
+     - name: MyGender
+       run: echo "${{inputs.gender}}"
+       
+     - name: MaritalStatus
+       run: echo "${{inputs.married}}"
  
