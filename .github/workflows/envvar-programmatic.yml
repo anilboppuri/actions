@@ -11,24 +11,19 @@ jobs:
     steps:
       - name: env_demo_step
         run: echo "Hello, $CHANNEL_NAME !"
-        
       - name: Set Envariables programatically
         run: echo "COUNT=100000" >> $GITHUB_ENV
-        
       - name: Access env variable
         run: echo ${{env.COUNT}}
-        
       - name: Update env variables
         run: |
           echo "CHANNEL_NAME= MODIFIED" >> GITHUB_ENV
           echo "COUNT=350000" >> GITHUB_ENV
-          
       - name: Access UpdatedEnv variables
         run: |
           echo ${{env.COUNT}} 
           echo ${{env.CHANNEL_NAME}}
- 
- envdemojob2:
+  envdemojob2:
     runs-on: ubuntu-latest
     steps:
       - name: Access UpdatedEnv variables Job2
