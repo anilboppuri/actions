@@ -30,4 +30,4 @@ jobs:
           echo "RUNNER_NAME - $RUNNER_NAME - ${{runner.name}}"
           echo "RUNNER_OS - $RUNNER_OS - ${{runner.os}}"
           echo "RUNNER_ARCH - $RUNNER_ARCH - ${{runner.arch}}"
-          echo "RUNNER_T
+          echo "RUNNER_TEMP - $RUNNER_TEMP - ${{runner.temp}}
