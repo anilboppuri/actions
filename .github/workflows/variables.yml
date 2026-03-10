@@ -1,29 +1,33 @@
 name: Built-in Variables
-
-on: 
- push: 
-  branches: [master]
-  
- workflow_dispatch
-
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch: 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
       - name: GitHub
-        run: |
+        run: >
           echo: "GITHUB_REF - $GITHUB_REF  - ${{github.ref}}"
+
           echo: "GITHUB_WOKFLOW - $GITHUB_WOKFLOW  - ${{github.workflow}}"
+
           echo: "GITHUB_RUN_ID - $GITHUB_RUN_ID  - ${{github.run_id}}"
+
           echo: "GITHUB_RUN_NUMBER - $GITHUB_RUN_NUMBER  - ${{github.run_number}}"
+
           echo: "GITHUB_REPOSITORY - $GITHUB_REPOSITORY  - ${{github.repository}}"
+
           echo: "GITHUB_EVENT_NAME - $GITHUB_EVENT_NAME  - ${{github.repository}}"
+
           echo: "GITHUB_RUN_ATTEMPT - $GITHUB_RUN_ATTEMPT  - ${{github.event_name}}"
+
           echo: "GITHUB_RUN_ATTEMPT - $GITHUB_RUN_ATTEMPT  - ${{github.run_attempt}}"
-      
       - name: Runner
-        run: |  
-           echo "RUNNER_NAME - $RUNNER_NAME - ${{runner.name}}"
-           echo "RUNNER_OS - $RUNNER_OS - ${{runner.os}}"
-           echo "RUNNER_ARCH - $RUNNER_ARCH - ${{runner.arch}}"
-           echo "RUNNER_TEMP - $RUNNER_TEMP - ${{runner.temp}}" 
+        run: |
+          echo "RUNNER_NAME - $RUNNER_NAME - ${{runner.name}}"
+          echo "RUNNER_OS - $RUNNER_OS - ${{runner.os}}"
+          echo "RUNNER_ARCH - $RUNNER_ARCH - ${{runner.arch}}"
+          echo "RUNNER_T
