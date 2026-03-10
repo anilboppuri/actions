@@ -1,7 +1,7 @@
 name: Built-in Variables
 
-on:
-  branches: master
+on: [push]
+  branches: [master]
 
 jobs:
   job1:
