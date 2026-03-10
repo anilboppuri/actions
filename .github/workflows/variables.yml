@@ -10,21 +10,21 @@ jobs:
     steps:
       - name: GitHub
         run: >
-          echo: "GITHUB_REF - $GITHUB_REF  - ${{github.ref}}"
+          echo "GITHUB_REF - $GITHUB_REF  - ${{github.ref}}"
 
-          echo: "GITHUB_WOKFLOW - $GITHUB_WOKFLOW  - ${{github.workflow}}"
+          echo "GITHUB_WOKFLOW - $GITHUB_WOKFLOW  - ${{github.workflow}}"
 
-          echo: "GITHUB_RUN_ID - $GITHUB_RUN_ID  - ${{github.run_id}}"
+          echo "GITHUB_RUN_ID - $GITHUB_RUN_ID  - ${{github.run_id}}"
 
-          echo: "GITHUB_RUN_NUMBER - $GITHUB_RUN_NUMBER  - ${{github.run_number}}"
+          echo "GITHUB_RUN_NUMBER - $GITHUB_RUN_NUMBER  - ${{github.run_number}}"
 
-          echo: "GITHUB_REPOSITORY - $GITHUB_REPOSITORY  - ${{github.repository}}"
+          echo "GITHUB_REPOSITORY - $GITHUB_REPOSITORY  - ${{github.repository}}"
 
-          echo: "GITHUB_EVENT_NAME - $GITHUB_EVENT_NAME  - ${{github.repository}}"
+          echo "GITHUB_EVENT_NAME - $GITHUB_EVENT_NAME  - ${{github.repository}}"
 
-          echo: "GITHUB_RUN_ATTEMPT - $GITHUB_RUN_ATTEMPT  - ${{github.event_name}}"
+          echo "GITHUB_RUN_ATTEMPT - $GITHUB_RUN_ATTEMPT  - ${{github.event_name}}"
 
-          echo: "GITHUB_RUN_ATTEMPT - $GITHUB_RUN_ATTEMPT  - ${{github.run_attempt}}"
+          echo "GITHUB_RUN_ATTEMPT - $GITHUB_RUN_ATTEMPT  - ${{github.run_attempt}}"
       - name: Runner
         run: |
           echo "RUNNER_NAME - $RUNNER_NAME - ${{runner.name}}"
